@@ -1,7 +1,6 @@
 package fss
 
 import (
-	"fmt"
 	"hash"
 	"io"
 	"strings"
@@ -58,7 +57,6 @@ func (f *Fss) Search(q string) []QueryResult {
 		if ok {
 			for _, val := range vals {
 				str, _ := f.fi[val]
-				fmt.Println(str)
 				qr := QueryResult{
 					S: str,
 				}

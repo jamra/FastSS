@@ -20,7 +20,7 @@ func TestBuildFSS(t *testing.T) {
 	count := 0
 	for scanner.Scan() {
 		count++
-		if count == 1000 {
+		if count == 2000 {
 			break
 		}
 		fss.Insert(scanner.Text())
