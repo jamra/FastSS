@@ -10,18 +10,19 @@ A derivation of Fast Similarity Search with some differences to keep search time
 * More unit tests (especially for different sizes of d)
 
 ## Example
-```
-	fss = NewFss(2)
-	filename := "/usr/share/dict/words"
-	f, err := os.Open(filename)
-	if err != nil {
-		t.Error("Unable to open file %s", filename)
-	}
+```go
+fss = NewFss(2)
+filename := "/usr/share/dict/words"
+f, err := os.Open(filename)
+if err != nil {
+	t.Error("Unable to open file %s", filename)
+}
 
-	scanner := bufio.NewScanner(f)
-	for scanner.Scan() {
-		fss.Insert(scanner.Text())
-	}
-	results := fss.Search("avast")
-	fmt.Println(results)
+scanner := bufio.NewScanner(f)
+for scanner.Scan() {
+	fss.Insert(scanner.Text())
+}
+
+results := fss.Search("avast")
+fmt.Println(results)
 ```
