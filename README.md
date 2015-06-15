@@ -11,7 +11,7 @@ A derivation of Fast Similarity Search with some differences to keep search time
 
 ## Example
 ```
-  fss = NewFss(2)
+	fss = NewFss(2)
 	filename := "/usr/share/dict/words"
 	f, err := os.Open(filename)
 	if err != nil {
