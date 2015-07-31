@@ -1,6 +1,6 @@
 # FastSS
 A derivation of Fast Similarity Search with some differences to keep search time consistent with the average case.
-
+(This is something I built quickly. I didn't test thoroughly)
 ## Issues
 * Does not build in an appropriate timeline
 * Should not include the index of a word multiple times for a single match
@@ -8,6 +8,7 @@ A derivation of Fast Similarity Search with some differences to keep search time
 ## TODOs
 * Benchmark
 * More unit tests (especially for different sizes of d)
+* Review and benchmark the insertion time and memory footprint
 
 ## Example
 ```go
